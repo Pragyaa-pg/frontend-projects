@@ -28,7 +28,7 @@ function getWeather() {
     return;
   }
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city},IN&units=metric&appid=c056990c19c21bb8cf853308cdf1f604`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city},IN&units=metric&appid=your_api_key_here`;
 
   fetch(url)
     .then(res => res.json())
