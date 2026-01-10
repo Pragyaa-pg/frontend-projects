@@ -1,0 +1,114 @@
+body {
+  background: #050b1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Container */
+.water-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Water Text */
+.water-text {
+  font-size: 80px;
+  font-weight: bold;
+  background: linear-gradient(
+    120deg,
+    #00c6ff,
+    #0072ff,
+    #00c6ff
+  );
+  background-size: 200% 200%;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: waterMove 6s infinite linear;
+}
+
+/* Water movement */
+@keyframes waterMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+/* Bubbles */
+.bubbles span {
+  position: absolute;
+  bottom: -50px;
+  width: 20px;
+  height: 20px;
+  background: rgba(255,255,255,0.4);
+  border-radius: 50%;
+  animation: bubble 6s infinite ease-in;
+}
+
+.bubbles span:nth-child(1) { left: 10%; animation-delay: 0s; }
+.bubbles span:nth-child(2) { left: 30%; animation-delay: 2s; }
+.bubbles span:nth-child(3) { left: 50%; animation-delay: 4s; }
+.bubbles span:nth-child(4) { left: 70%; animation-delay: 1s; }
+.bubbles span:nth-child(5) { left: 90%; animation-delay: 3s; }
+
+@keyframes bubble {
+  0% {
+    transform: translateY(0) scale(0.5);
+    opacity: 0;
+  }
+  50% { opacity: 1; }
+  100% {
+    transform: translateY(-200px) scale(1);
+    opacity: 0;
+  }
+}
+
+/* Sparkles */
+.sparkles span {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 10px white;
+  animation: sparkle 2s infinite ease-in-out;
+}
+
+.sparkles span:nth-child(1) { top: -10px; left: 20%; }
+.sparkles span:nth-child(2) { top: 10px; right: 20%; }
+.sparkles span:nth-child(3) { bottom: 0; left: 50%; }
+.sparkles span:nth-child(4) { top: 50%; left: -10px; }
+.sparkles span:nth-child(5) { top: 50%; right: -10px; }
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0.5); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+/* Ripple Layer */
+.ripple-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Ripple circle */
+.ripple {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(0, 200, 255, 0.7);
+  border-radius: 50%;
+  transform: scale(0);
+  animation: rippleAnim 1s ease-out;
+}
+
+/* Ripple animation */
+@keyframes rippleAnim {
+  to {
+    transform: scale(8);
+    opacity: 0;
+  }
+}
