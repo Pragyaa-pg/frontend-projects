@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-end;
+}
+
+.footer {
+    background: linear-gradient(135deg, #1d2671, #c33764);
+    color: #fff;
+    width: 100%;
+    position: relative;
+    padding-top: 60px;
+}
+
+/* Wave effect */
+.wave {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    border-radius: 0 0 50% 50%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 20px;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    max-width: 250px;
+    margin: 15px;
+}
+
+.footer-section h2,
+.footer-section h3 {
+    margin-bottom: 15px;
+}
+
+.footer-section p {
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #ffd369;
+}
+
+/* Newsletter */
+.newsletter input {
+    padding: 8px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.newsletter button {
+    width: 100%;
+    padding: 8px;
+    background: #ffd369;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.newsletter button:hover {
+    background: #ffb703;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.social-icons span {
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.2);
+    margin: 0 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.social-icons span:hover {
+    background: #ffd369;
+    color: #000;
+    transform: translateY(-5px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 15px;
+    font-size: 13px;
+    background: rgba(0,0,0,0.2);
+}
