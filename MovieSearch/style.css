@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #000000);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* App Container */
+.app {
+    width: 100%;
+    max-width: 1000px;
+    padding: 40px;
+    text-align: center;
+}
+
+/* Title */
+.app h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+}
+
+/* Search Box */
+.search-box {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.search-box input {
+    width: 65%;
+    padding: 14px 18px;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    backdrop-filter: blur(8px);
+}
+
+.search-box input::placeholder {
+    color: #ccc;
+}
+
+.search-box button {
+    padding: 14px 28px;
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    color: white;
+    font-size: 1.05rem;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(255, 75, 43, 0.6);
+    transition: all 0.3s ease;
+}
+
+.search-box button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 0 35px rgba(255, 75, 43, 0.9);
+}
+
+/* Movie Container */
+#movieContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Movie Card */
+.movie-card {
+    position: relative;
+    width: 340px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 20px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+}
+
+/* Poster */
+.movie-card img {
+    width: 100%;
+    border-radius: 16px;
+    margin-bottom: 15px;
+}
+
+/* Glow Border */
+.movie-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 2px;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    pointer-events: none;
+}
+
+/* Movie Info */
+.movie-card h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.movie-card p {
+    font-size: 0.95rem;
+    margin: 6px 0;
+    line-height: 1.5;
+}
+
+.movie-card strong {
+    color: #ffd369;
+}
+
+/* Rating Badge */
+.rating {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #ffd369;
+    box-shadow: 0 0 10px rgba(255, 211, 105, 0.8);
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box input,
+    .search-box button {
+        width: 100%;
+    }
+
+    .movie-card {
+        width: 100%;
+    }
+}
