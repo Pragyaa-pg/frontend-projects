@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #f8e39e, #f095dc);
+  font-family: 'Macondo', sans-serif;
+}
+
+.heading {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  background: linear-gradient(to right, #91b8ff, #982a2a);
+  
+  -webkit-text-fill-color: transparent;
+}
+#menu{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #982a2a;
+}
+
+
+
+
